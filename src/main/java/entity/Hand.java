@@ -22,6 +22,7 @@ public class Hand {
 
         for (Card card : cards) {
             card.flip(); //turn card over
+            System.out.println(card.getSuit() + " " + card.getValue());
             value += card.getPointValue(); //tallys score
             card.flip(); //hide again
         }

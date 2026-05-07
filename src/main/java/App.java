@@ -17,8 +17,6 @@ public class App {
 
         int handValue = hand1.getValue();
 
-        System.out.println("You reveal: ");
-        hand1.getValue();
         System.out.println("Hand value: " + handValue);
 
     }
