@@ -15,17 +15,43 @@ public class Card {
     }
 
     public String getSuit() {
-        return suit;
+        if (isFaceUp) {
+            return suit;
+        }
+        else {
+            return "#"; //hidden
+        }
     }
 
     public String getValue() {
-        return value;
+        if (isFaceUp) {
+            return value;
+        }
+        else {
+            return "#";
+        }
     }
 
     public int getPointValue() {
         if (isFaceUp) {
             //return point value
-            return 0;
+            switch(this.getValue()) {
+                case "A" -> {
+                    return 11;
+                }
+                case "K", "Q", "J", "10" -> {
+                    return 10;
+                }
+
+                case "2", "3", "4", "5", "6", "7", "8", "9" -> {
+                    return Integer.parseInt(getValue());
+                }
+
+                default -> {
+                    System.out.println("Unexpected error");
+                    return 0;
+                }
+            }
         } else {
             return 0;
         }
