@@ -20,7 +20,7 @@ public class BlackjackConsoleUI {
         System.out.print("Enter your name: ");
         String name = scanner.nextLine();
 
-        game = new BlackjackGame(name, 1000);
+        game = new BlackjackGame(name);
 
         boolean playing = true;
         while (playing) {
@@ -51,7 +51,7 @@ public class BlackjackConsoleUI {
 
         // Player's turn
         boolean playerTurn = true;
-        while (playerTurn && game.isGameInProgress()) {
+        while (playerTurn) {
             PlayerAction action = getPlayerAction();
 
             if (action == PlayerAction.STAND) {

@@ -18,7 +18,7 @@ public class BlackjackGame {
     private Hand dealerHand;
     private boolean gameInProgress;
 
-    public BlackjackGame(String playerName, int startingChips) {
+    public BlackjackGame(String playerName) {
         this.deck = new Deck();
         this.player = new Player(playerName);
         this.dealerHand = new Hand();
