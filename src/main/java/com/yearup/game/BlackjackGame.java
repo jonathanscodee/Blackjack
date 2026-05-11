@@ -46,10 +46,11 @@ public class BlackjackGame {
         return false;
     }
 
-    private void startNewRound() {
-        player.clearHand();
+    public void startNewRound() {
+        player.getHand().clear();
         dealerHand.clear();
 
+        deck.shuffle();
         // Deal initial cards
         player.getHand().addCard(deck.drawCard());
         dealerHand.addCard(deck.drawCard());

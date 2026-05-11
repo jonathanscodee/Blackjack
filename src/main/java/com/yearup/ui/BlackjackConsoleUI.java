@@ -35,6 +35,9 @@ public class BlackjackConsoleUI {
     }
 
     private void playRound() {
+
+        game.startNewRound();
+
         clearScreen();
         displayPlayerInfo();
 
